@@ -1,0 +1,5 @@
+# (if execution policy blocks scripts, set for this session)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
+
+# activate venv
+. .\.venv\Scripts\Activate.ps1
