@@ -357,24 +357,4 @@ http://<EC2_PUBLIC_IP>:5000
 
 ---
 
-## 🏁 Key Highlights for Recruiters
-
-* End-to-end **production-ready MLOps pipeline**
-* Modular, scalable codebase
-* MongoDB-based data ingestion
-* Schema-driven data validation
-* Cloud-based model registry (AWS S3)
-* Fully automated CI/CD with Docker & GitHub Actions
-* Deployed on AWS EC2 with live inference support
-
----
-
-If you want, next I can:
-
-* Add **architecture diagram (Mermaid / PNG)**
-* Optimize this README for **ATS & resume keywords**
-* Create a **short “Recruiter TL;DR” section**
-* Help you write **resume bullets based on this project**
-
-Just say the word 👊
 
