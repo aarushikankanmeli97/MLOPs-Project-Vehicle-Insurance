@@ -15,34 +15,33 @@ The goal of this project is to showcase **production-grade machine learning prac
 This repository is structured to be **scalable, maintainable, and cloud-ready**, making it suitable for real-world ML systems.
 
 ```mermaid
+flowchart TD
+    A[Raw Dataset] -->|EDA & Upload via Notebook| B[MongoDB Atlas]
 
-flowchart LR
-    A[Dataset] -->|Notebook| B[MongoDB Atlas]
+    B --> C[Data Ingestion Component]
+    C --> D[Data Validation Component]
+    D --> E[Data Transformation Component]
+    E --> F[Model Trainer Component]
 
-    B --> C[Data Ingestion]
-    C --> D[Data Validation]
-    D --> E[Data Transformation]
-    E --> F[Model Trainer]
-
-    F --> G[Model Evaluation]
+    F --> G[Model Evaluation Component]
     G -->|Approved Model| H[AWS S3 Model Registry]
+    G -->|Rejected Model| F
 
-    H --> I[Model Pusher]
-    H --> J[Prediction Pipeline]
+    H --> I[Model Pusher Component]
 
-    J --> K[User / Client]
+    H --> J[Prediction Pipeline Code]
 
-    subgraph CI/CD
-        L[GitHub Actions]
-        M[Docker]
-        N[AWS ECR]
-        O[EC2 Ubuntu Server]
+    subgraph CI/CD Pipeline
+        K[GitHub Actions]
+        L[Docker Build]
+        M[AWS ECR]
+        N[EC2 Ubuntu Server]
     end
 
+    K --> L
     L --> M
     M --> N
-    N --> O
-    O --> P
+
 ```
 
 ---
