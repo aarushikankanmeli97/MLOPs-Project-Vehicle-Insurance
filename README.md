@@ -15,6 +15,7 @@ The goal of this project is to showcase **production-grade machine learning prac
 This repository is structured to be **scalable, maintainable, and cloud-ready**, making it suitable for real-world ML systems.
 
 ```mermaid
+
 flowchart LR
     A[Dataset] -->|Notebook| B[MongoDB Atlas]
 
@@ -29,17 +30,19 @@ flowchart LR
     H --> I[Model Pusher]
     H --> J[Prediction Pipeline]
 
+    J --> K[User / Client]
+
     subgraph CI/CD
-        K[GitHub Actions]
-        L[Docker]
-        M[AWS ECR]
-        N[EC2 Ubuntu Server]
+        L[GitHub Actions]
+        M[Docker]
+        N[AWS ECR]
+        O[EC2 Ubuntu Server]
     end
 
-    K --> L
     L --> M
     M --> N
-
+    N --> O
+    O --> P
 ```
 
 ---
