@@ -29,20 +29,17 @@ flowchart LR
     H --> I[Model Pusher]
     H --> J[Prediction Pipeline]
 
-    J --> K[Flask App]
-    K --> L[User / Client]
-
     subgraph CI/CD
-        M[GitHub Actions]
-        N[Docker]
-        O[AWS ECR]
-        P[EC2 Ubuntu Server]
+        K[GitHub Actions]
+        L[Docker]
+        M[AWS ECR]
+        N[EC2 Ubuntu Server]
     end
 
+    K --> L
+    L --> M
     M --> N
-    N --> O
-    O --> P
-    P --> K
+
 ```
 
 ---
