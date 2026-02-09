@@ -4,8 +4,6 @@
 
 > **End-to-end MLOps project** implementing a production-grade ML pipeline with MongoDB-based data ingestion, schema-driven validation, model training & evaluation, AWS-backed model registry, Dockerized deployment, and fully automated CI/CD using GitHub Actions and EC2.
 
-This section is **gold** — recruiters skim, and this tells them *everything* in 10 seconds.
-
 ---
 
 ## 📌 Overview
